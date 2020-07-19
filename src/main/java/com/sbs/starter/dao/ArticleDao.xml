@@ -3,11 +3,13 @@
 
 <mapper namespace="com.sbs.starter.dao.ArticleDao">
 	<select id="getList" parameterType="map" resultType="Article">
-		SELECT * FROM starter_bbs1 ORDER BY id DESC
+		SELECT *
+		FROM starter_bb1 ORDER BY id DESC
 	</select>
 
-	<insert id="add" parameterType="map">
-		INSERT INTO starter_bbs1
+	<insert id="add" parameterType="map" useGeneratedKeys="true"
+		keyProperty="id">
+		INSERT INTO starter_bb1
 		SET regDate = NOW(),
 		title = #{title},
 		body = #{body}
