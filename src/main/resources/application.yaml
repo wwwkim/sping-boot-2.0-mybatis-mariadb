@@ -1,4 +1,4 @@
-mybatis:
+Dmybatis:
   type-aliases-package: com.sbs.starter.dto
 server:
   port: 8083

@@ -11,20 +11,25 @@
 	width: 1000px;
 	margin: 0 auto;
 }
+
 .common-form>div>* {
 	float: left;
 }
+
 .common-form>div::after {
 	content: "";
 	display: block;
 	clear: both;
 }
+
 .common-form>div>span {
 	width: 50px;
 }
+
 .common-form>div>div {
 	width: calc(100% - 50px);
 }
+
 .common-form>div>div>input[type="text"], .common-form>div>div>textarea {
 	width: 90%;
 }
@@ -39,14 +44,18 @@
 			if (form.title.value.length == 0) {
 				alert('제목을 입력해주세요.');
 				form.title.focus();
+
 				return false;
 			}
+
 			form.body.value = form.body.value.trim();
 			if (form.body.value.length == 0) {
 				alert('내용을 입력해주세요.');
 				form.body.focus();
+
 				return false;
 			}
+
 			form.submit();
 		}
 	</script>
@@ -77,4 +86,4 @@
 		</div>
 	</form>
 </body>
-</html> 
+</html>
