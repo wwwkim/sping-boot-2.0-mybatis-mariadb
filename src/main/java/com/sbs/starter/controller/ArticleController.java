@@ -22,12 +22,12 @@ public class ArticleController {
 	ArticleService articleService;
 
 	@RequestMapping("/article/list")
-	public String showList(Model model) {
+	public String showList(Model aModel) {
 		List<Article> list = articleService.getList();
 		int totalCount = articleService.getTotalCount();
 
-		model.addAttribute("list", list);
-		model.addAttribute("totalCount", totalCount);
+		aModel.addAttribute("list", list);
+		aModel.addAttribute("totalCount", totalCount);
 
 		return "article/list";
 	}
@@ -46,7 +46,7 @@ public class ArticleController {
 
 		StringBuilder sb = new StringBuilder();
 
-		sb.append("alert('"  + msg + "');");
+		sb.append("alert('" + msg + "');");
 		sb.append("location.replace('./detail?id=" + newId + "');");
 
 		sb.insert(0, "<script>");
