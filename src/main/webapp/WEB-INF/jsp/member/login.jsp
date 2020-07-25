@@ -11,14 +11,18 @@
 		if (form.loginId.value.length == 0) {
 			alert('로그인ID를 입력해주세요.');
 			form.loginId.focus();
+
 			return false;
 		}
+
 		form.loginPw.value = form.loginPw.value.trim();
 		if (form.loginPw.value.length == 0) {
 			alert('로그인PW를 입력해주세요.');
 			form.loginPw.focus();
+
 			return false;
 		}
+
 		form.submit();
 	}
 </script>
@@ -49,10 +53,5 @@
 		</div>
 	</div>
 </form>
-
-<div class="btns con">
-	<a href="/">메인</a>
-	<a href="/">가입</a>
-</div>
 
 <%@ include file="../part/foot.jspf"%>
