@@ -39,7 +39,11 @@ public class ArticleServiceImpl implements ArticleService {
 
 	@Override
 	public Article getOne(long id) {
-
 		return articleDao.getOne(id);
+	}
+
+	@Override
+	public void delete(long id) {
+		articleDao.delete(id);
 	}
 }
